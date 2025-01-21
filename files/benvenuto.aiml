@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+<category> 
+    <pattern> * </pattern>
+	    <template> Ciao, sono Alice l'assistente virtuale di FeelGood. Tu come ti chiami? </template>
+</category>
+
+<category>
+    <pattern>WHAT IS MY NAME</pattern>
+        <template> <get name="name" /> </template>
+</category>
+
+<category>
+    <pattern>il mio nome è * </pattern>
+        <template> Piacere di conoscerti <set name="name"><star />. Come posso aiutarti? </set> 
+            <button>
+                <text> giorni di apertura </text>
+                    <postback> orari </postback>
+            </button>
+
+            <button>
+                <text> abbonamenti </text>
+                     <postback> tipologie </postback>
+            </button>
+
+            <button>
+                <text>servizi inclusi</text>
+                     <postback> attivita </postback>
+            </button>
+        </template>
+</category>
+
+<category>
+<pattern> mi chiamo * </pattern>
+    <template> Piacere di conoscerti <set name="name"><star />. Come posso aiutarti? </set> 
+            <button>
+                <text> giorni di apertura </text>
+                    <postback> orari </postback>
+            </button>
+
+            <button>
+                <text> abbonamenti </text>
+                     <postback> tipologie </postback>
+            </button>
+
+            <button>
+                <text>servizi inclusi</text>
+                     <postback> attivita </postback>
+            </button>
+    </template>
+</category>
+
+<category>
+<pattern> </pattern>
+    <template> Piacere di conoscerti <set name="name"><star />. Come posso aiutarti? </set> 
+            <button>
+                <text> giorni di apertura </text>
+                    <postback> orari </postback>
+            </button>
+
+            <button>
+                <text> abbonamenti </text>
+                     <postback> tipologie </postback>
+            </button>
+
+            <button>
+                <text>servizi inclusi</text>
+                     <postback> attivita </postback>
+            </button>
+    </template>
+</category>
+<category>
+	<pattern>ORARI</pattern>
+	    <template>La nostra palestra è aperta dal lunedi al sabato dalle 7:00 alle 22:00. Posso aiutarti con qualcos'altro?
+	    <button>
+                <text> abbonamenti </text>
+                     <postback> tipologie </postback>
+            </button>
+
+            <button>
+                <text>servizi inclusi</text>
+                     <postback> attivita </postback>
+            </button>
+	    </template>
+</category>
+
+<category>
+	<pattern>TIPOLOGIE</pattern>
+    	<template>Abbiamo diversi piani di abbonamenti in base alle tue esigenze:
+        	<ul>
+	            <li> annuale al costo di 500 euro </li>
+	             <li> semestrale al costo di 280 euro </li>
+	             <li> trimestrale al costo di 160 euro </li>
+	             <li> mensile al costo di 90 euro </li>
+             </ul>
+             Vuoi altre informazioni?
+            <button>
+                <text> promozioni </text>
+                     <postback> offerte </postback>
+            </button>
+             <button>
+                <text> giorni di apertura </text>
+                    <postback> orari </postback>
+            </button>
+            <button>
+                <text>servizi inclusi</text>
+                     <postback> attivita </postback>
+            </button>
+
+	     </template>
+</category>
+
+
+
+<category>
+	<pattern>OFFERTE</pattern>
+	    <template> Se ti iscrivi entro la fine del mese ricevi uno sconto del 20% sull'abbonamento annuale. 
+	    <button>
+	        <text> clicca qui per ricevere lo sconto </text>
+	        <url> https://sites.google.com/view/palestrafeelgood/iscrizione </url>
+        </button>
+        <button>
+                <text>servizi inclusi</text>
+                     <postback> attivita </postback>
+            </button>
+	    </template>
+</category>
+
+<category>
+	<pattern>ATTIVITA</pattern>
+	    <template>Offriamo una vasta gamma di attività tra cui allenamento con i pesi, corsi di gruppo e sessioni di allenamento personalizzato. Se hai una preferenza fammi sapere e ti dirò di più!
+           <button>
+                <text> allenamento pesi </text>
+                     <postback> PESI </postback>
+            </button>
+             <button>
+                <text> corsi di gruppo </text>
+                    <postback> CORSI </postback>
+            </button>
+            <button>
+                <text> lezioni personalizzate </text>
+                     <postback> PERSONAL </postback>
+            </button>
+            
+	    </template>
+</category>
+
+<category> 
+    <pattern> PESI </pattern>
+        <template>  La nostra sala pesi è uno spazio dedicato a chi desidera migliorare la propria forma fisica e raggiungere i propri obiettivi. Troverai a tua disposizione:
+<ul>
+    <li> Macchinari isotonici: per lavorare su specifici gruppi muscolari in modo sicuro ed efficace.</li>
+    <li> Pesi liberi e attrezzature per esercizi funzionali: bilancieri, manubri, panche, kettlebell, trx e anelli.</li>
+    <li> Macchinari cardiovascolari: tapis roulant, ellittiche, cyclette, per bruciare calorie e migliorare la resistenza. </li>
+</ul>
+
+Inoltre i nostri istruttori sono a tua disposizione per consigli personalizzati e per aiutarti a creare un programma di allenamento su misura per le tue esigenze. 
+<button>
+                <text> allenamento personalizzato </text>
+                     <postback> personal </postback>
+            </button>
+</template>
+</category>
+
+<category> 
+    <pattern> CORSI </pattern>
+        <template> Posso aiutarti a trovare il corso più adatto a te. Per iniziare, potresti dirmi qual è il tuo obiettivo? 
+        
+         <button>
+                <text> dimagrire </text>
+                     <postback> DIMAGRIRE </postback>
+            </button>
+             <button>
+                <text> tonificare </text>
+                    <postback> TONIFICARE </postback>
+            </button>
+            <button>
+                <text> migliorare la flessibilità </text>
+                     <postback> FLESSIBILITA </postback>
+            </button>
+        </template>
+</category>
+
+
+<category> 
+    <pattern> DIMAGRIRE </pattern>
+        <template> 
+             <random> 
+            <li> Zumba: perfetto per chi ama muoversi a ritmo di musica e vuole dimagrire. E' adatta a tutti, indipendentemente dall'età o dal livello di forma fisica. Desideri altre opzioni?
+           <button>
+                <text> si </text>
+                     <postback> DIMAGRIRE </postback>
+            </button>
+            <button>
+                <text> maggiori informazioni </text>
+                <url> https://sites.google.com/view/palestrafeelgood/corsi-di-gruppo </url>
+            </button>
+            </li>
+            <li> HIIT: allenamenti brevi e intensi che alternano fasi di alta intensità a fasi di recupero. Perfetti per chi ha poco tempo e vuole massimizzare i risultati. Desideri altre opzioni? 
+            <button>
+                <text> si </text>
+                     <postback> DIMAGRIRE </postback>
+            </button>
+            <button>
+                <text> maggiori informazioni </text>
+                <url> https://sites.google.com/view/palestrafeelgood/corsi-di-gruppo </url>
+            </button>
+            </li>
+            <li> Fit Boxes: unisce l'intensità e l'efficacia degli sport da combattimento con il ritmo coinvolgente della musica e l'allenamento aerobico. È un modo divertente per mantenersi in forma e ridurre lo stress. Desideri altre opzioni?
+            <button>
+                <text> si </text>
+                     <postback> DIMAGRIRE </postback>
+            </button>
+            <button>
+                <text> maggiori informazioni </text>
+                <url> https://sites.google.com/view/palestrafeelgood/corsi-di-gruppo </url>
+            </button>
+            </li>
+            </random>
+        </template>
+</category> 
+        
+<category> 
+    <pattern> TONIFICARE </pattern>
+        <template>
+            <random> 
+            <li> Fit Boxes: unisce l'intensità e l'efficacia degli sport da combattimento con il ritmo coinvolgente della musica e l'allenamento aerobico. È un modo divertente per mantenersi in forma e ridurre lo stress. Desideri altre opzioni?
+            <button>
+                <text> si </text>
+                     <postback> TONIFICARE </postback>
+            </button>
+            <button>
+                <text> maggiori informazioni </text>
+                <url> https://sites.google.com/view/palestrafeelgood/corsi-di-gruppo </url>
+            </button>
+            </li>
+            <li> GAG (Gambe Addominali Glutei): Come suggerisce il nome, questo corso si concentra specificamente su questi tre gruppi muscolari. Desideri altre opzioni?
+            <button>
+                <text> si </text>
+                     <postback> TONIFICARE </postback>
+            </button>
+            <button>
+                <text> maggiori informazioni </text>
+                <url> https://sites.google.com/view/palestrafeelgood/corsi-di-gruppo </url>
+            </button>
+            </li>
+            <li> Circuit Training: prevede l'esecuzione di una serie di esercizi in circuito, alternando esercizi aerobici e di forza. Desideri altre opzioni?
+            <button>
+                <text> si </text>
+                     <postback> TONIFICARE </postback>
+            </button>
+            <button>
+                <text> maggiori informazioni </text>
+                <url> https://sites.google.com/view/palestrafeelgood/corsi-di-gruppo </url>
+            </button>
+            </li>
+         </random>
+        </template>
+</category> 
+
+
+<category> 
+    <pattern> FLESSIBILITA </pattern>
+        <template> 
+             <random> 
+            <li> Pilates: migliora la postura, la forza del core e la flessibilità. Ideale per chi ha problemi alla schiena o vuole un allenamento più dolce. Desideri altre opzioni?
+            <button>
+                <text> si </text>
+                     <postback> FLESSIBILITA </postback>
+            </button>
+            <button>
+                <text> maggiori informazioni </text>
+                <url> https://sites.google.com/view/palestrafeelgood/corsi-di-gruppo </url>
+            </button>
+            </li>
+            <li> Yoga: unisce esercizi fisici, respirazione e meditazione, aiutandoti a rilassarti e a ritrovare il benessere psicofisico. Desideri altre opzioni?
+            <button>
+                <text> si </text>
+                     <postback> FLESSIBILITA </postback>
+            </button>
+            <button>
+                <text> maggiori informazioni </text>
+                <url> https://sites.google.com/view/palestrafeelgood/corsi-di-gruppo </url>
+            </button>
+            </li>
+            <li> Stretching: questo corso è interamente dedicato all'allungamento muscolare, vengono eseguiti esercizi statici e dinamici per migliorare la flessibilità di tutto il corpo. Desideri altre opzioni?
+            <button>
+                <text> si </text>
+                     <postback> FLESSIBILITA </postback>
+            </button>
+            <button>
+                <text> maggiori informazioni </text>
+                <url> https://sites.google.com/view/palestrafeelgood/corsi-di-gruppo </url>
+            </button>
+            </li>
+             </random>
+        </template>
+</category> 
+        
+<category> 
+    <pattern> PERSONAL </pattern>
+        <template>
+            <image> </image>
+             Il trainer creerà un piano di allenamento su misura per te, tenendo conto dei tuoi obiettivi, delle tue capacità fisiche e di eventuali limitazioni.
+             <button>
+                <text> maggiori informazioni </text>
+                <url> https://sites.google.com/view/palestrafeelgood/lezioni-private </url>
+            </button> 
+            <button>
+                <text> corsi di gruppo </text>
+                    <postback> CORSI </postback>
+            </button>
+        </template>
+</category> 
+
+</aiml> 
+
+
